@@ -5,13 +5,9 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "paths": {
-      "dj-angular-chart": [
-        "dist/dj-angular-chart/dj-angular-chart",
-        "dist/dj-angular-chart"
-      ],
-      "dj-angular-pdf-viewer": [
-        "dist/dj-angular-pdf-viewer/dj-angular-pdf-viewer",
-        "dist/dj-angular-pdf-viewer"
+      "angular-dj-chart": [
+        "dist/angular-dj-chart/angular-dj-chart",
+        "dist/angular-dj-chart"
       ]
     },
     "forceConsistentCasingInFileNames": true,

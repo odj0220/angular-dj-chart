@@ -109,23 +109,23 @@
         }
       }
     },
-    "dj-angular-chart": {
+    "angular-dj-chart": {
       "projectType": "library",
-      "root": "projects/dj-angular-chart",
-      "sourceRoot": "projects/dj-angular-chart/src",
+      "root": "projects/angular-dj-chart",
+      "sourceRoot": "projects/angular-dj-chart/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/dj-angular-chart/ng-package.json"
+            "project": "projects/angular-dj-chart/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/dj-angular-chart/tsconfig.lib.prod.json"
+              "tsConfig": "projects/angular-dj-chart/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/dj-angular-chart/tsconfig.lib.json"
+              "tsConfig": "projects/angular-dj-chart/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -133,9 +133,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/dj-angular-chart/src/test.ts",
-            "tsConfig": "projects/dj-angular-chart/tsconfig.spec.json",
-            "karmaConfig": "projects/dj-angular-chart/karma.conf.js"
+            "main": "projects/angular-dj-chart/src/test.ts",
+            "tsConfig": "projects/angular-dj-chart/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-dj-chart/karma.conf.js"
           }
         }
       }

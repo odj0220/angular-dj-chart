@@ -1,0 +1,30 @@
+{
+  "name": "angular-dj-chart",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.1.1",
+    "@angular/core": "^12.1.1",
+    "crossfilter2": "1.4.8",
+    "d3": "5.16.0",
+    "dc": "^3.2.2",
+    "d3-selection": "^3.0.0",
+    "d3-cloud": "^1.2.5"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  },
+  "optionalDependencies": {
+    "crossfilter2": "1.4.8",
+    "d3": "5.16.0",
+    "dc": "^3.2.2",
+    "d3-selection": "^3.0.0",
+    "d3-cloud": "^1.2.5"
+  },
+  "main": "bundles/angular-dj-chart.umd.js",
+  "module": "fesm2015/angular-dj-chart.js",
+  "es2015": "fesm2015/angular-dj-chart.js",
+  "esm2015": "esm2015/angular-dj-chart.js",
+  "fesm2015": "fesm2015/angular-dj-chart.js",
+  "typings": "angular-dj-chart.d.ts",
+  "sideEffects": false
+}

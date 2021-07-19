@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:lib": "ng build angular-dj-chart",
+    "publish": "node ./build-lib.js"
   },
   "private": true,
   "dependencies": {
