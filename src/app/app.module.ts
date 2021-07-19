@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {DjAngularChartModule} from 'dj-angular-chart';
+import {AngularDjChartModule} from 'angular-dj-chart';
 // import {DjAngularChartModule} from '../../projects/dj-angular-chart/src/public-api';
 
 @NgModule({
@@ -13,7 +13,7 @@ import {DjAngularChartModule} from 'dj-angular-chart';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DjAngularChartModule,
+    AngularDjChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

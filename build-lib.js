@@ -1,7 +1,7 @@
 var obj = require('./angular.json');
 var exec = require('child_process').execSync;
 
-const projects = Object.keys(obj.projects).filter(p => p.indexOf('wise-web-framework') < 0);
+const projects = Object.keys(obj.projects).filter(p => p.indexOf('dj-angular-libraries') < 0);
 
 projects.forEach(lib => {
 

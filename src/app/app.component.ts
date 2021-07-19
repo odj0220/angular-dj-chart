@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {DjChartOption} from 'dj-angular-chart';
 import moment from 'moment';
+import {DjChartOption} from 'angular-dj-chart';
 
 @Component({
   selector: 'app-root',
