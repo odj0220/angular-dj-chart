@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:lib": "ng build angular-dj-chart",
-    "publish": "node ./build-lib.js"
+    "publish": "node ./build-lib.js",
+    "pull-subtree": "node ./pull-subtree.js"
   },
   "private": true,
   "dependencies": {
