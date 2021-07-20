@@ -4,6 +4,8 @@
 name: Node.js Package
 
 on:
+  push:
+    branches: [ master ]
   release:
     types: [created]
 
@@ -30,7 +32,7 @@ jobs:
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: 890a9ad5-03da-4fba-9e1b-1466f2f594ba
 
   publish-gpr:
     needs: build
@@ -47,4 +49,4 @@ jobs:
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: 890a9ad5-03da-4fba-9e1b-1466f2f594ba
