@@ -1,24 +1,88 @@
 # AngularDjChart
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+D3, Crossfilter, DC library를 이용하여 Angular 모듈로 만든 차트
 
-## Code scaffolding
+## 설치
 
-Run `ng generate component component-name --project angular-dj-chart` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-dj-chart`.
-> Note: Don't forget to add `--project angular-dj-chart` or else it will be added to the default project in your `angular.json` file. 
+`npm install angular-dj-chart` 
+ 
 
-## Build
+## 사용
+#### app.module.ts
+````ts
+import ...
+import {AngularDjChartModule} from 'angular-dj-chart';
 
-Run `ng build angular-dj-chart` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  declarations: [
+    AppComponent,
+    ...
+  ],
+  imports: [
+   ...
+   AngularDjChartModule
+  ],
+  entryComponents: [],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+````
 
-## Publishing
 
-After building your library with `ng build angular-dj-chart`, go to the dist folder `cd dist/angular-dj-chart` and run `npm publish`.
+#### component.ts
+````ts
+import {DjChartOption} from 'angular-dj-chart';
 
-## Running unit tests
+compositeChart = new DjChartOption({
+    type: 'composite',
+    data: [
+        { "key": ["티셔츠", "20200201"], "value": 860},
+        { "key": ["팬츠", "20200201"], "value": 635},
+        { "key": ["풀오버", "20200201"], "value": 462},
+        { "key": ["원피스", "20200201"], "value": 454},
+        { "key": ["베스트", "20200201"], "value": 63},
+        { "key": ["티셔츠", "20200203"], "value": 3547},
+        { "key": ["팬츠", "20200203"], "value": 3228},
+        { "key": ["원피스", "20200203"], "value": 2184},
+        ...
+    ],
+    seriesTypes: {
+        '티셔츠': 'lineSymbol',
+        '원피스': 'stepLine',
+        '팬츠': 'line',
+        '풀오버': 'symbol',
+        '스커트': 'line',
+        '가디건': 'line',
+        '블라우스': 'symbol'
+    },
+    yAxisOptions: [
+        {
+            axisLabel: '판매량',
+            keys: ['티셔츠', '원피스'],
+            domain: [200, 5000]
+        },
+        {
+            axisLabel: '판매량2',
+            keys: ['팬츠', '가디건', '스커트'],
+            domain: [0, 5000]
+        },
+        {
+            axisLabel: '판매량3',
+            keys: ['풀오버', '블라우스'],
+            domain: [0, 2000]
+        }
+    ],
+    xAxisOption: {
+        axisLabel: '날짜 (일)',
+        type: 'date',
+        dateFormat: 'YYYYMMDD',
+        dateTickFormat: 'YYYY-MM-DD',
+    }
+})
+````
 
-Run `ng test angular-dj-chart` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### component.html
+```angular2html
+<wise-chart [option]="compositeChart"></wise-chart>
+```
