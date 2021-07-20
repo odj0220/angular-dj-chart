@@ -1,6 +1,7 @@
 {
   "name": "angular-dj-chart",
   "version": "0.0.2",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^12.1.1",
     "@angular/core": "^12.1.1",
